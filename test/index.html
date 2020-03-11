@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body style="padding:0px; margin:0px;">
+	<div id="test">
+		<svg width="1000" height="19" xmlns="http://www.w3.org/2000/svg">
+			<g>
+				<line stroke="green" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_1" y1="3.529604" x1="0" y2="3.529604" x2="500" stroke-width="5" stroke="#000" fill="none"/>
+				<line stroke="red" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y1="9.529604" x1="500" y2="9.529604" x2="800" stroke-width="5" stroke="#000" fill="none" />
+				<line stroke="gray" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_3" y1="16.033833" x1="800" y2="16.033833" x2="1000" stroke-width="5" stroke="#000" fill="none"/>
+			</g>
+		</svg>
+	</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.0.4/dist/gsap.min.js"></script>
+<script src="../index.js"></script>
+<script language="javascript">
+	var svgd = new SVGDrawer(document.getElementById("test"), 0.5);
+	TweenMax.to(svgd, 10, {progress:1, yoyo:true, repeat:-1});
+	
+	var debug = new DebugSvgTimeline(svgd);
+	debug.tar.addEventListener("mousemove", function(e){
+		var x = e.clientX - debug.tar.offsetLeft;
+		var percentx = x / debug.tar.offsetWidth;
+		svgd.progress = percentx;
+	})
+</script>
+</body>
+</html>

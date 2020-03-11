@@ -1,0 +1,25 @@
+{
+  "name": "svg-line-progress",
+  "version": "1.0.0",
+  "description": "Control line drawings from a single progress parameter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ch1qui/svg-line-progress.git"
+  },
+  "keywords": [
+    "svg",
+    "draw",
+    "line",
+    "progress"
+  ],
+  "author": "ch1qui",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/ch1qui/svg-line-progress/issues"
+  },
+  "homepage": "https://github.com/ch1qui/svg-line-progress#readme"
+}
